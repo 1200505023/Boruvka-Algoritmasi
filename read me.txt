@@ -1,0 +1,18 @@
+Borůvka Algoritması, graf tabanlı bir algoritmadır ve metin dosyalarındaki kelime sayımı işlemleri için uygun bir algoritma değildir. 
+
+
+Borůvka algoritması, minimum kesim ağaçları problemi için kullanılan bir algoritmadır. 
+Bu algoritma, grafın bağlantılarını birleştirerek minimum ağaç oluşturur.
+
+
+Algoritmanın çalışma mantığı şu şekildedir:
+
+Başlangıçta, her düğüm ayrı bir bağlantı bileşenine atanır.
+Her iterasyonda, her bileşen için en düşük ağırlıklı kenar seçilir.
+Seçilen kenarlar kullanılarak bileşenler birleştirilir ve bu bileşenler tekrar ayrıştırılır.
+Yalnızca tek bir bileşen kalana kadar 2. ve 3. adımlar tekrarlanır.
+Algoritmanın en iyi durumu O(E log V), en kötü durumu O(E^2) ve ortalama durumu ise O(E log V)'dir. Burada E, kenar sayısı ve V, düğüm sayısıdır. 
+Algoritmanın en iyi durumunda, ağaçta az sayıda kenar olduğunda, kenarların minimum kesimler arasında hızlıca bulunması sağlanır. 
+Ancak, en kötü durumda, kenarların tüm düğümleri birbirine bağladığı bir tam bağlı grafa sahip olunduğunda algoritmanın performansı oldukça kötü olabilir.
+
+Bu nedenle, Borůvka algoritması genellikle seyrek grafikler için daha uygundur.
